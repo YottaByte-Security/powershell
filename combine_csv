@@ -1,0 +1,8 @@
+$fileEntries = [IO.Directory]::GetFiles("C:\Users\A555162\Desktop\reports");
+foreach($fileName in $fileEntries)
+{
+    Add-Content C:\Users\A555162\Desktop\reports\bigcsv.csv $fileName
+    cat $fileName | Add-Content C:\Users\A555162\Desktop\reports\bigcsv.csv
+
+}
+
